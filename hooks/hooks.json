@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'LazyGrok: /ulw \u00b7 /ulw-plan \u00b7 /brainstorm \u00b7 /debug \u00b7 /hyperplan \u00b7 /start-work \u00b7 /ulw-loop \u00b7 /review-work'",
+            "command": "echo 'LazyGrok v0.3: /ulw /brainstorm /debug /hyperplan /frontend /programming /visual-qa /ast-grep /teammode /sessions + full OmO skill set'",
             "timeout": 5
           }
         ]
