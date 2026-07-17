@@ -1,14 +1,68 @@
 # LazyGrok
 
 **OmO / LazyCodex workflows for [Grok Build](https://grok.com).**  
-Ultrawork, ultraresearch, plan → start-work, evidence gates, and role agents — on **Grok models** instead of OpenAI Luna/Sol.
+Ultrawork, brainstorm, debugging, hyperplan, plan → start-work, evidence gates, and role agents — on **Grok models** instead of OpenAI Codex.
 
 ```bash
-grok plugin install /path/to/lazygrok --trust
-# enable in ~/.grok/config.toml [plugins].enabled if needed
+grok plugin install ~/Documents/GitHub/lazygrok --trust
+# ensure lazygrok is in ~/.grok/config.toml [plugins].enabled
 ```
 
-Then in a session: `/ulw`, `/ulw-research`, `/ulw-plan`, `/start-work`, `/ulw-loop`, `/init-deep`.
+---
+
+## How to use (type these)
+
+### Command pillars
+
+| Command | What it does |
+| --- | --- |
+| `/brainstorm` | OmO-power explore-first requirements → `.omo/brainstorms/` |
+| `/ulw-plan` | Prometheus decision-complete plan → `.omo/plans/` |
+| `/start-work` | Orchestrate plan; workers implement; gate verifies |
+| `/ulw` · ultrawork | Evidence-driven ship mode (RED→GREEN + real-surface proof) |
+| `/ulw-loop` | Durable loop until completion promise |
+| `/ulw-research` | Max-saturation research swarm |
+| `/debug` | OmO hypothesis-driven debugging (+ full `references/`) |
+| `/hyperplan` | Adversarial multi-agent planning (5-lens combat) |
+| `/init-deep` | Hierarchical `AGENTS.md` memory |
+| `/review-work` | Multi-lane post-implementation review |
+| `/remove-ai-slops` | Behavior-preserving AI-slop cleanup |
+| `/refactor` | Behavior-preserving restructure |
+| `/git-master` | Atomic commits / history investigation |
+
+### Typical flows
+
+**Fuzzy product idea**
+
+```text
+/brainstorm multi-tenant auth for the API
+# approve brief →
+/ulw-plan
+# approve plan →
+/start-work
+```
+
+**Clear feature, ship hard**
+
+```text
+/ulw add 5/min rate limit on /login and prove with a real request
+```
+
+**Bug**
+
+```text
+/debug API returns 200 but empty body on checkout
+```
+
+**Max-rigor planning**
+
+```text
+/hyperplan redesign billing webhooks
+```
+
+Natural language also works when the skill description matches (`debug this`, `brainstorm options`, `review my work`, `ulw: …`).
+
+State lives under **`.omo/`** in the project (plans, drafts, brainstorms, boulder, ulw-loop, research).
 
 ---
 
@@ -16,106 +70,64 @@ Then in a session: `/ulw`, `/ulw-research`, `/ulw-plan`, `/start-work`, `/ulw-lo
 
 | Piece | Role |
 | --- | --- |
-| **OmO** ([oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent)) | The agent harness playbook (skills, loops, discipline) |
-| **LazyCodex** ([lazycodex](https://github.com/code-yeongyu/lazycodex)) | OmO packaged for **Codex CLI** |
-| **LazyGrok** (this repo) | Same ideas packaged for **Grok** — one repo, one install |
+| **OmO** ([oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent)) | Agent harness playbook |
+| **LazyCodex** ([lazycodex](https://github.com/code-yeongyu/lazycodex)) | OmO packaged for Codex CLI |
+| **LazyGrok** (this repo) | Same workflows packaged for **Grok** |
 
-You do **not** need OmO + LazyCodex installed to use LazyGrok. Those are inspirations (and local clones under `~/Documents/GitHub/` for maintainers).
-
----
-
-## Commands (V0)
-
-| Command | What it does |
-| --- | --- |
-| `/ulw` · `/ultrawork` | Evidence-driven ship mode (RED→GREEN + real-surface proof) |
-| `/ulw-research` · ultraresearch | Max-saturation research swarm + cited synthesis |
-| `/ulw-plan` | Plan only → `.omo/plans/` (Prometheus) |
-| `/start-work` | Orchestrate plan; workers implement; gate verifies |
-| `/ulw-loop` | Durable loop until completion promise |
-| `/init-deep` | Hierarchical `AGENTS.md` memory |
-| skills | `comment-checker`, `remove-ai-slops`, `review-work` |
-
-State lives under **`.omo/`** in the project (plans, boulder, ledgers, research) — same spirit as LazyCodex.
+You do **not** need OmO + LazyCodex installed to use LazyGrok.
 
 ---
 
 ## Agents (Grok roles)
 
-| Agent | Job | Effort |
-| --- | --- | --- |
-| `lg-explorer` | Codebase map (read-only) | low |
-| `lg-librarian` | Docs / web / OSS (read-only) | low |
-| `lg-worker` | Default implementation | medium |
-| `lg-worker-high` | Hard implementation | high |
-| `lg-plan` · `lg-metis` · `lg-momus` | Plan / gaps / plan review | high |
-| `lg-code-reviewer` · `lg-gate-reviewer` | Review + final gate | high |
+| Agent | Job |
+| --- | --- |
+| `lg-explorer` | Codebase map (read-only) |
+| `lg-librarian` | Docs / web / OSS (read-only) |
+| `lg-worker` / `lg-worker-high` | Implementation |
+| `lg-plan` · `lg-metis` · `lg-momus` | Plan / gaps / plan review |
+| `lg-code-reviewer` · `lg-gate-reviewer` | Review + final gate |
 
-Mapped from LazyCodex’s explorer/librarian/workers/plan/momus/gate stack. See [docs/models.md](docs/models.md).
+See [docs/models.md](docs/models.md) and [references/grok-tool-map.md](references/grok-tool-map.md).
 
 ---
 
-## Install
+## Install / verify
 
 ```bash
-# from this repo
-grok plugin install . --trust
-
-# or by path
 grok plugin install ~/Documents/GitHub/lazygrok --trust
+grok plugin list
+grok plugin details lazygrok
 ```
-
-Enable if Grok leaves plugins disabled by default:
 
 ```toml
 # ~/.grok/config.toml
 [plugins]
-enabled = ["lazygrok"]  # plus your other plugins
-```
-
-Verify:
-
-```bash
-grok plugin list
-grok plugin details lazygrok
-grok inspect   # skills + agents should show plugin: lazygrok
+enabled = [..., "lazygrok"]
 ```
 
 Uninstall: `grok plugin uninstall lazygrok --confirm`
 
 ---
 
+## Skill inventory (v0.2)
+
+| Ported from OmO/LazyCodex | Status |
+| --- | --- |
+| ultrawork, ulw-plan (+ refs + scaffold), ulw-loop, ulw-research, start-work | yes |
+| debugging (+ full methodology/runtimes/tools refs) | yes |
+| brainstorm (OmO explore + adversarial lenses; LazyGrok command) | yes |
+| hyperplan (Grok `spawn_subagent` adaptation) | yes |
+| review-work, remove-ai-slops, init-deep, refactor, git-master | yes |
+| frontend, programming, visual-qa, ast-grep, ultimate-browsing, teammode | not yet |
+
+Tool names are rewritten for Grok (`spawn_subagent`, not Codex `multi_agent_v1` / OpenCode `team_*`).
+
+---
+
 ## Inspirations (credit)
 
-Heavily inspired by / adapted from:
+Heavily adapted from **oh-my-openagent (OmO)** and **LazyCodex** by code-yeongyu / Sisyphus Labs.  
+Independent port for Grok Build. Not affiliated with OpenAI or xAI. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
-- **[oh-my-openagent (OmO)](https://github.com/code-yeongyu/oh-my-openagent)** — ultrawork, ulw-research, plan/start-work, comment checker, discipline agents  
-- **[LazyCodex](https://github.com/code-yeongyu/lazycodex)** — Codex distribution, install UX, agent role packaging  
-- Name pattern: **LazyVim** for Neovim  
-
-LazyGrok is an independent port for Grok Build. Not affiliated with Sisyphus Labs, OpenAI, or xAI. Workflow text is reimplemented for Grok’s plugin/skill/subagent APIs (no Codex `apply_patch` / `multi_agent_v1` hard-wiring).
-
----
-
-## Layout
-
-```
-lazygrok/
-├── .grok-plugin/plugin.json
-├── skills/          # ultrawork, ulw-research, ulw-plan, start-work, …
-├── agents/          # lg-* role agents
-├── commands/        # /ulw, /ulw-research, …
-├── hooks/           # session + keyword hints + post-edit nudge
-├── scripts/         # scaffold-plan, prompt-mode-hint
-├── references/      # Grok tool map
-└── docs/models.md
-```
-
----
-
-## Status
-
-**V0** — skill + agent + command parity for daily LazyCodex workflows on Grok.  
-Not a full OmO Ultimate port (no OpenCode Team Mode, no hashline edit tool, no OpenAI multi-model matrix).
-
-MIT — see [LICENSE](LICENSE) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+MIT — see [LICENSE](LICENSE).

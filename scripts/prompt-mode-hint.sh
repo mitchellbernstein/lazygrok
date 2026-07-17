@@ -34,6 +34,20 @@ if printf '%s' "$lower" | grep -qE 'ulw-loop|/ulw-loop'; then
   hints+=("ULW-LOOP keyword detected — durable loop until promise/evidence.")
 fi
 
+
+if printf '%s' "$lower" | grep -qE '\b(debug|/debug|debugging)\b'; then
+  hints+=("DEBUG keyword detected — load debugging skill; runtime evidence only.")
+fi
+if printf '%s' "$lower" | grep -qE 'brainstorm|/brainstorm'; then
+  hints+=("BRAINSTORM keyword detected — load brainstorm skill; first line BRAINSTORM MODE ENABLED!")
+fi
+if printf '%s' "$lower" | grep -qE 'hyperplan|/hyperplan|\bhpp\b'; then
+  hints+=("HYPERPLAN keyword detected — adversarial multi-agent planning.")
+fi
+if printf '%s' "$lower" | grep -qE 'review-work|review my work'; then
+  hints+=("REVIEW-WORK keyword detected — multi-lane post-implementation review.")
+fi
+
 if ((${#hints[@]})); then
   printf 'LazyGrok mode hints:\n'
   for h in "${hints[@]}"; do printf ' - %s\n' "$h"; done
