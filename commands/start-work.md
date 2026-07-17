@@ -1,8 +1,10 @@
 ---
-description: Execute a .omo plan as orchestrator (workers do the code)
+description: "[LazyGrok] LazyGrok execute .omo plan (alias of /lg-start-work)"
 ---
 
-Load and follow the **start-work** skill. You are orchestrator only.
+# LazyGrok `/start-work` → preferred: `/lg-start-work`
 
-Plan / args:
+Load and follow the **start-work** skill.
+
+
 $ARGUMENTS

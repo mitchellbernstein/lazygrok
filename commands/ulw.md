@@ -1,8 +1,10 @@
 ---
-description: Enable LazyGrok ultrawork (evidence-driven ship mode)
+description: "[LazyGrok] LazyGrok ultrawork (evidence ship mode) (alias of /lg-ulw)"
 ---
 
-Load and follow the **ultrawork** skill for the rest of this task. First line must be `ULTRAWORK MODE ENABLED!`
+# LazyGrok `/ulw` → preferred: `/lg-ulw`
 
-User request:
+Load and follow the **ultrawork** skill.
+First line must be `ULTRAWORK MODE ENABLED!`
+
 $ARGUMENTS

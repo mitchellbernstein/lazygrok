@@ -1,6 +1,6 @@
 ---
 name: ultrawork
-description: Binding ultrawork mode directive for omo on Grok. When a prompt contains ultrawork or ulw, the omo UserPromptSubmit hook injects a short bootstrap that points at this file. Read the whole file and follow every rule in it for the rest of the task.
+description: "[LazyGrok] Binding ultrawork mode directive for omo on Grok. When a prompt contains ultrawork or ulw, the omo UserPromptSubmit hook injects a short bootstrap that points at this file. Read the whole file and follow every rule in it for the rest of the task. LazyGrok commands: /lg-ulw, /lg-ultrawork, /ulw."
 metadata:
   short-description: Binding ultrawork mode directive
 ---

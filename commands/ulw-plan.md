@@ -1,8 +1,10 @@
 ---
-description: Prometheus plan-only workflow → .omo/plans/
+description: "[LazyGrok] LazyGrok Prometheus plan → .omo/plans/ (alias of /lg-ulw-plan)"
 ---
 
-Load and follow the **ulw-plan** skill. Plan only; never implement product code.
+# LazyGrok `/ulw-plan` → preferred: `/lg-ulw-plan`
 
-Topic:
+Load and follow the **ulw-plan** skill.
+
+
 $ARGUMENTS

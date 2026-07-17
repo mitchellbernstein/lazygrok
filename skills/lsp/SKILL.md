@@ -1,6 +1,6 @@
 ---
 name: lsp
-description: "Use when you need language-server diagnostics, definitions, references, symbols, or rename safety in the current workspace. On Grok, prefer lsp-setup + CLI language servers (typescript-language-server, basedpyright, rust-analyzer, gopls, etc.) via shell; use native lsp.* MCP tools only if present. Triggers: lsp, diagnostics, go to definition, find references, rename symbol, type errors after edit."
+description: "[LazyGrok] Use when you need language-server diagnostics, definitions, references, symbols, or rename safety in the current workspace. On Grok, prefer lsp-setup + CLI language servers (typescript-language-server, basedpyright, rust-analyzer, gopls, etc.) via shell; use native lsp.* MCP tools only if present. Triggers: lsp, diagnostics, go to definition, find references, rename symbol, type errors after edit. LazyGrok commands: /lg-lsp."
 ---
 
 ## Grok Harness Tool Compatibility

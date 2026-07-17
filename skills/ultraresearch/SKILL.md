@@ -1,6 +1,6 @@
 ---
 name: ultraresearch
-description: "Alias for ulw-research / ultraresearch mode."
+description: "[LazyGrok] Alias for ulw-research / ultraresearch mode. LazyGrok commands: /lg-ulw-research, /ultraresearch."
 metadata:
   short-description: ulw-research alias
 ---

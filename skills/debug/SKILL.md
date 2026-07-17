@@ -1,6 +1,6 @@
 ---
 name: debug
-description: "Alias for OmO debugging skill. Use when user types debug, /debug, or wants LazyGrok debug mode."
+description: "[LazyGrok] Alias for OmO debugging skill. Use when user types debug, /debug, or wants LazyGrok debug mode. LazyGrok commands: /lg-debug, /debug."
 metadata:
   short-description: Debugging alias
 ---

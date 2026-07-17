@@ -1,6 +1,6 @@
 ---
 name: teammode
-description: "LazyGrok team orchestration: run a named team of cooperating workers with durable .omo/teams state. MUST USE when the user asks to create, run, coordinate, inspect, archive, or delete a team of agents, or to work as a team in parallel. On Grok the transport is spawn_subagent waves (parent brokers); optional team.mjs script still owns disk state. Use a team when work is not perfectly isolated but parallelizing helps; use plain subagents when scope is isolated or the goal is ambiguous. Triggers: team mode, teammode, make a team, run as a team, team of agents, coordinate threads, parallel agents, archive the team, /teammode."
+description: "[LazyGrok] LazyGrok team orchestration: run a named team of cooperating workers with durable .omo/teams state. MUST USE when the user asks to create, run, coordinate, inspect, archive, or delete a team of agents, or to work as a team in parallel. On Grok the transport is spawn_subagent waves (parent brokers); optional team.mjs script still owns disk state. Use a team when work is not perfectly isolated but parallelizing helps; use plain subagents when scope is isolated or the goal is ambiguous. Triggers: team mode, teammode, make a team, run as a team, team of agents, coordinate threads, parallel agents, archive the team, /teammode. LazyGrok commands: /lg-teammode."
 metadata:
   short-description: Named multi-agent teams with .omo/teams state
 ---

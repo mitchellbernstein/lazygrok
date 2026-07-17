@@ -1,6 +1,6 @@
 ---
 name: ulw
-description: "Alias for ultrawork. Use when the user types ulw, /ulw, or wants LazyGrok ship mode."
+description: "[LazyGrok] Alias for ultrawork. Use when the user types ulw, /ulw, or wants LazyGrok ship mode. LazyGrok commands: /lg-ulw, /ulw."
 metadata:
   short-description: Ultrawork alias
 ---

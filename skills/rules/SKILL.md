@@ -1,6 +1,6 @@
 ---
 name: rules
-description: "Use when the user asks about project rules, AGENTS.md, injected instructions, supported rule file locations, or how LazyGrok/Grok loads rules vs Codex Rules. Triggers: rules, AGENTS.md, project instructions, .cursor/rules, .omo/rules, CONTEXT.md."
+description: "[LazyGrok] Use when the user asks about project rules, AGENTS.md, injected instructions, supported rule file locations, or how LazyGrok/Grok loads rules vs Codex Rules. Triggers: rules, AGENTS.md, project instructions, .cursor/rules, .omo/rules, CONTEXT.md. LazyGrok commands: /lg-rules."
 ---
 
 # Project rules (LazyGrok / Grok)

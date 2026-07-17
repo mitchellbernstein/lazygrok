@@ -68,6 +68,11 @@ if printf '%s' "$lower" | grep -qE 'coding-agent-sessions|/sessions|what did i w
   hints+=("SESSIONS keyword — load coding-agent-sessions.")
 fi
 
+
+if printf '%s' "$lower" | grep -qE '/lg-|\\blg-(ulw|debug|brainstorm|plan|start-work|hyperplan)'; then
+  hints+=("LazyGrok /lg-* command detected — load matching LazyGrok skill (not CE/GSD).")
+fi
+
 if ((${#hints[@]})); then
   printf 'LazyGrok mode hints:\n'
   for h in "${hints[@]}"; do printf ' - %s\n' "$h"; done

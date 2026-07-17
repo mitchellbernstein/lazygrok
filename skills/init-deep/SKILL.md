@@ -1,6 +1,6 @@
 ---
 name: init-deep
-description: "(builtin) Initialize hierarchical AGENTS.md knowledge base"
+description: "[LazyGrok] (builtin) Initialize hierarchical AGENTS.md knowledge base. LazyGrok commands: /lg-init-deep."
 ---
 ## Grok Harness Tool Compatibility
 

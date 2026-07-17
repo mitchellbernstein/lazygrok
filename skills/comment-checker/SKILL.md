@@ -1,6 +1,6 @@
 ---
 name: comment-checker
-description: "Strip AI-slop comments after edits. Use for comment-checker, no AI comments, clean comments."
+description: "[LazyGrok] Strip AI-slop comments after edits. Use for comment-checker, no AI comments, clean comments."
 metadata:
   short-description: No AI comment slop
 ---

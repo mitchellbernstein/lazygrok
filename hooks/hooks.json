@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'LazyGrok v0.3: /ulw /brainstorm /debug /hyperplan /frontend /programming /visual-qa /ast-grep /teammode /sessions + full OmO skill set'",
+            "command": "echo \"LazyGrok: prefer /lg-* commands (e.g. /lg-ulw /lg-brainstorm /lg-debug /lg-ulw-plan /lg-start-work). Bare /ulw etc. still work.\"",
             "timeout": 5
           }
         ]

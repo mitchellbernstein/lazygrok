@@ -1,6 +1,6 @@
 ---
 name: refactor
-description: "Intelligent refactor command. Triggers: refactor, refactoring, cleanup, restructure, extract, simplify, modernize."
+description: "[LazyGrok] Intelligent refactor command. Triggers: refactor, refactoring, cleanup, restructure, extract, simplify, modernize. LazyGrok commands: /lg-refactor."
 ---
 ## Grok Harness Tool Compatibility
 

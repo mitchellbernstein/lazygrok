@@ -1,8 +1,10 @@
 ---
-description: OmO hypothesis-driven debugging (LazyGrok)
+description: "[LazyGrok] LazyGrok OmO hypothesis-driven debugging (alias of /lg-debug)"
 ---
 
-Load and follow the **debugging** skill (full OmO debug loop + references/). First line: treat as DEBUG MODE.
+# LazyGrok `/debug` → preferred: `/lg-debug`
 
-Bug / request:
+Load and follow the **debugging** skill.
+
+
 $ARGUMENTS

@@ -1,8 +1,10 @@
 ---
-description: OmO-power explore-first brainstorm → .omo/brainstorms/
+description: "[LazyGrok] LazyGrok OmO-power brainstorm → .omo/brainstorms/ (alias of /lg-brainstorm)"
 ---
 
-Load and follow the **brainstorm** skill. First line: `BRAINSTORM MODE ENABLED!`
+# LazyGrok `/brainstorm` → preferred: `/lg-brainstorm`
 
-Topic:
+Load and follow the **brainstorm** skill.
+First line: `BRAINSTORM MODE ENABLED!`
+
 $ARGUMENTS

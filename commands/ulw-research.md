@@ -1,8 +1,10 @@
 ---
-description: LazyGrok ultraresearch — maximum saturation research
+description: "[LazyGrok] LazyGrok ultraresearch (alias of /lg-ulw-research)"
 ---
 
-Load and follow the **ulw-research** skill. First line: `ULW-RESEARCH MODE ENABLED!`
+# LazyGrok `/ulw-research` → preferred: `/lg-ulw-research`
 
-Research topic:
+Load and follow the **ulw-research** skill.
+First line: `ULW-RESEARCH MODE ENABLED!`
+
 $ARGUMENTS

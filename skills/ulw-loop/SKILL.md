@@ -1,6 +1,6 @@
 ---
 name: ulw-loop
-description: Goal-like loop that uses ultrawork mode to decompose work into systematic, evidence-bound steps.
+description: "[LazyGrok] Goal-like loop that uses ultrawork mode to decompose work into systematic, evidence-bound steps. LazyGrok commands: /lg-ulw-loop."
 metadata:
   short-description: Goal-like ultrawork loop for systematic decomposition
 ---

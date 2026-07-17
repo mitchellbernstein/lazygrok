@@ -1,7 +1,7 @@
 {
   "name": "lazygrok",
-  "version": "0.3.0",
-  "description": "Full OmO/LazyCodex harness for Grok \u2014 ultrawork, brainstorm, debugging, frontend, programming, visual-qa, teammode, and the complete skill surface on Grok models.",
+  "version": "0.3.1",
+  "description": "OmO/LazyCodex harness for Grok. Prefer /lg-* slash commands (lg-ulw, lg-brainstorm, lg-debug, \u2026) so LazyGrok is distinct from CE/GSD/other plugins.",
   "author": {
     "name": "Mitchell Bernstein",
     "url": "https://github.com/mitchellbernstein"
@@ -23,6 +23,9 @@
     "programming",
     "visual-qa",
     "ast-grep",
-    "teammode"
+    "teammode",
+    "lg",
+    "lg-ulw",
+    "namespace"
   ]
 }

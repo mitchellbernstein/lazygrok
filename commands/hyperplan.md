@@ -1,8 +1,10 @@
 ---
-description: Adversarial multi-agent planning (LazyGrok hyperplan)
+description: "[LazyGrok] LazyGrok adversarial multi-agent planning (alias of /lg-hyperplan)"
 ---
 
-Load and follow the **hyperplan** skill. First line: `HYPERPLAN MODE ENABLED!`
+# LazyGrok `/hyperplan` → preferred: `/lg-hyperplan`
 
-Topic:
+Load and follow the **hyperplan** skill.
+First line: `HYPERPLAN MODE ENABLED!`
+
 $ARGUMENTS

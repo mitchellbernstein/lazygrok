@@ -1,109 +1,100 @@
 # LazyGrok
 
-**Full OmO / LazyCodex agent harness for [Grok Build](https://grok.com).**  
-Same workflows — ultrawork, brainstorm, debugging, frontend, programming, plan→start-work, teammode, evidence gates — on **Grok models** instead of OpenAI Codex.
+**OmO / LazyCodex harness for [Grok Build](https://grok.com)** — namespaced as **`/lg-*`** so it is obvious what is LazyGrok vs GSD, compound-engineering (`ce-*`), or other plugins.
 
 ```bash
 grok plugin install ~/Documents/GitHub/lazygrok --trust
-# ensure "lazygrok" is in ~/.grok/config.toml [plugins].enabled
+# enable "lazygrok" in ~/.grok/config.toml [plugins].enabled
 ```
 
 ---
 
-## How to use
+## Command prefix: `/lg-*` (preferred)
 
-### Core workflow
+| Prefer (LazyGrok) | Bare alias (still works) | What it does |
+| --- | --- | --- |
+| **`/lg-ulw`** · `/lg-ultrawork` | `/ulw` | Evidence-driven ship mode |
+| **`/lg-ulw-plan`** | `/ulw-plan` | Prometheus plan → `.omo/plans/` |
+| **`/lg-start-work`** | `/start-work` | Execute plan (orchestrator + workers) |
+| **`/lg-ulw-loop`** | `/ulw-loop` | Durable loop until evidence |
+| **`/lg-ulw-research`** | `/ulw-research` | Max-saturation research |
+| **`/lg-init-deep`** | `/init-deep` | Hierarchical `AGENTS.md` memory |
+| **`/lg-brainstorm`** | `/brainstorm` | OmO-power brainstorm → `.omo/brainstorms/` |
+| **`/lg-hyperplan`** | `/hyperplan` | Adversarial multi-agent planning |
+| **`/lg-debug`** | `/debug` | OmO hypothesis-driven debugging |
+| **`/lg-review-work`** | `/review-work` | Multi-lane post-impl review |
+| **`/lg-remove-ai-slops`** | `/remove-ai-slops` | AI-slop cleanup |
+| **`/lg-refactor`** | `/refactor` | Behavior-preserving restructure |
+| **`/lg-git-master`** | `/git-master` | Commits & git history |
+| **`/lg-frontend`** | `/frontend` | UI/UX design router |
+| **`/lg-programming`** | `/programming` | Strict TS/Python/Rust/Go |
+| **`/lg-visual-qa`** | `/visual-qa` | Screenshot / TUI QA |
+| **`/lg-ast-grep`** | `/ast-grep` | Structural search/rewrite |
+| **`/lg-ultimate-browsing`** | `/ultimate-browsing` | Hard web / WAF access |
+| **`/lg-sessions`** · `/lg-coding-agent-sessions` | `/sessions` | Agent session archaeology |
+| **`/lg-lsp`** · `/lg-lsp-setup` | `/lsp` · `/lsp-setup` | Language servers |
+| **`/lg-teammode`** | `/teammode` | Named multi-agent teams |
+| **`/lg-rules`** | `/rules` | Project rules / AGENTS.md |
 
-| Command | What it does |
-| --- | --- |
-| `/brainstorm` | OmO-power explore-first requirements → `.omo/brainstorms/` |
-| `/ulw-plan` | Prometheus decision-complete plan → `.omo/plans/` |
-| `/start-work` | Orchestrate plan; workers implement |
-| `/ulw` | Evidence-driven ship mode |
-| `/ulw-loop` | Durable loop until completion promise |
-| `/ulw-research` | Max-saturation research |
-| `/debug` | OmO hypothesis-driven debugging |
-| `/hyperplan` | Adversarial multi-agent planning |
-| `/init-deep` | Hierarchical `AGENTS.md` memory |
+Slash descriptions are tagged **`[LazyGrok]`** so they stand out in the command picker next to GSD / `ce-*` / other plugins.
 
-### Specialist skills (also slash-callable)
+Natural language still works (`ulw: …`, `debug this`) via skill descriptions that list both `/lg-*` and bare triggers.
 
-| Command | Domain |
-| --- | --- |
-| `/frontend` | UI/UX design router + brand refs + Lighthouse path |
-| `/programming` | Strict TS / Python / Rust / Go discipline + TDD |
-| `/visual-qa` | Screenshot / TUI visual QA |
-| `/ast-grep` | Structural search & rewrite |
-| `/refactor` | Behavior-preserving restructure |
-| `/git-master` | Atomic commits / history archaeology |
-| `/review-work` | Multi-lane post-implementation review |
-| `/remove-ai-slops` | AI-slop cleanup with regression locks |
-| `/ultimate-browsing` | Hard web / WAF / stealth browsing |
-| `/coding-agent-sessions` · `/sessions` | Local agent session search (incl. Grok) |
-| `/lsp` · `/lsp-setup` | Language servers / diagnostics |
-| `/teammode` | Named multi-agent teams (`.omo/teams/`) |
-| `/rules` | Project rules / AGENTS.md sources |
-
-### Typical flows
+### Typical flow
 
 ```text
-/brainstorm multi-tenant auth   →  /ulw-plan  →  /start-work
-/debug empty 200 on checkout
-/frontend redesign settings page
-/programming + /ulw implement rate limiter with TDD
-/teammode split API + web for feature X
+/lg-brainstorm multi-tenant auth
+/lg-ulw-plan
+/lg-start-work
+
+/lg-debug empty 200 on checkout
+/lg-ulw add rate limit and prove with a real request
 ```
 
-State: **`.omo/`** (plans, drafts, brainstorms, teams, ulw-loop, research).
+State: **`.omo/`** in the project (plans, drafts, brainstorms, teams, ulw-loop).
 
 ---
 
-## Agents (`lg-*`)
+## Agents (already `lg-*`)
 
-`lg-explorer` · `lg-librarian` · `lg-worker` · `lg-worker-high` · `lg-plan` · `lg-metis` · `lg-momus` · `lg-code-reviewer` · `lg-gate-reviewer`
+| Agent | Job |
+| --- | --- |
+| `lg-explorer` | Codebase map (read-only) |
+| `lg-librarian` | Docs / web / OSS (read-only) |
+| `lg-worker` · `lg-worker-high` | Implementation |
+| `lg-plan` · `lg-metis` · `lg-momus` | Plan / gaps / plan review |
+| `lg-code-reviewer` · `lg-gate-reviewer` | Review + final gate |
 
 See [docs/models.md](docs/models.md) and [references/grok-tool-map.md](references/grok-tool-map.md).
 
 ---
 
-## Skill inventory (v0.3 — full port)
+## Skills (28) + aliases
 
-| Family | Status |
-| --- | --- |
-| ultrawork, ulw-plan (+ refs/scaffold), ulw-loop, ulw-research, start-work | full |
-| debugging (+ methodology/runtimes/tools) | full |
-| brainstorm, hyperplan | full (Grok-adapted) |
-| review-work, remove-ai-slops, init-deep, refactor, git-master | full |
-| frontend (+ design brand refs) | full |
-| programming (+ language refs) | full |
-| visual-qa, ast-grep, ultimate-browsing | full |
-| coding-agent-sessions (+ Grok ref) | full |
-| lsp, lsp-setup, rules | full (Grok-adapted; no Codex LSP MCP assumed) |
-| teammode | full (spawn_subagent transport; `.omo/teams` scripts) |
-| comment-checker | full |
-
-Tool names rewritten for Grok (`spawn_subagent`, not Codex `multi_agent_v1` / OpenCode `team_*`).
+Full OmO/LazyCodex surface: ultrawork, ulw-plan, start-work, ulw-loop, ulw-research, init-deep, brainstorm, hyperplan, debugging, review-work, remove-ai-slops, comment-checker, refactor, git-master, programming, frontend, visual-qa, ast-grep, ultimate-browsing, coding-agent-sessions, lsp, lsp-setup, rules, teammode (+ thin aliases `ulw`, `debug`, `sessions`, `ultraresearch`).
 
 ---
 
-## Install / verify
+## Not LazyGrok (other plugins)
+
+| Prefix / style | Plugin |
+| --- | --- |
+| `ce-*` | compound-engineering |
+| GSD / get-shit-done style commands | that plugin (not this repo) |
+| Cursor `brainstorming`, etc. | Cursor skills |
+
+If it does **not** start with `/lg-` (or the documented bare OmO alias), it is **not** LazyGrok.
+
+---
+
+## Install
 
 ```bash
+grok plugin uninstall lazygrok --confirm   # if upgrading
 grok plugin install ~/Documents/GitHub/lazygrok --trust
-grok plugin list
 grok plugin details lazygrok
 ```
 
-```toml
-[plugins]
-enabled = [..., "lazygrok"]
-```
+Restart the Grok session so `/lg-*` commands appear.
 
-After skill updates, reinstall (or restart Grok) so `~/.grok/installed-plugins/lazygrok-*` refreshes.
-
----
-
-## Inspirations
-
-Adapted from **[oh-my-openagent (OmO)](https://github.com/code-yeongyu/oh-my-openagent)** and **[LazyCodex](https://github.com/code-yeongyu/lazycodex)**.  
-Independent Grok Build port. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). MIT — [LICENSE](LICENSE).
+MIT — adapted from OmO / LazyCodex. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
