@@ -1,0 +1,20 @@
+{
+  "name": "lazygrok",
+  "version": "0.1.0",
+  "description": "OmO / LazyCodex agent harness for Grok Build — ultrawork, ulw-research, plan→start-work, evidence gates, and role agents on Grok models.",
+  "author": {
+    "name": "Mitchell Bernstein",
+    "url": "https://github.com/mitchellbernstein"
+  },
+  "homepage": "https://github.com/mitchellbernstein/lazygrok",
+  "repository": "https://github.com/mitchellbernstein/lazygrok",
+  "license": "MIT",
+  "keywords": [
+    "grok",
+    "omo",
+    "lazycodex",
+    "ultrawork",
+    "ulw-research",
+    "agent-harness"
+  ]
+}

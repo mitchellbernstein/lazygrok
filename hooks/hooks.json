@@ -1,0 +1,38 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'LazyGrok: ultrawork · ulw-research · ulw-plan · start-work · ulw-loop ready. Try /ulw or /ulw-research.'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${GROK_PLUGIN_ROOT:-.}/scripts/prompt-mode-hint.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "search_replace|Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'LazyGrok: after edits, apply comment-checker (no AI-slop comments).'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
